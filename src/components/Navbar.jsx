@@ -5,10 +5,7 @@ export default function Navbar() {
   //   const [lastScrollY, setLastScrollY] = useState(0);
   let lastY = window.scrollY;
   useEffect(() => {
-    console.log(`Last Scroll ${lastY}`);
-
     const handleScroll = () => {
-      console.log("scroll Y", window.scrollY);
       const currentScrollY = window.scrollY;
       if (currentScrollY < lastY) {
         controls.start({ y: 0 });
@@ -32,7 +29,7 @@ export default function Navbar() {
       className="fixed bg-white shadow-md top-0 left-0 w-full z-50 "
     >
       <div className=" flex flex-wrap w-full mx-auto max-w-screen-xl ">
-        <div className="flex w-full p-4 border-b">
+        <div className="flex w-full p-2 sm:p-3 md:p-4 border-b">
           <div className="flex w-[70%] gap-10 items-center">
             <div className="font-bold border-2 bg-blue-900 p-2 rounded-lg text-white">
               RANDOM
@@ -44,10 +41,10 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="w-[30%] flex justify-end gap-4 flex-wrap">
-            <button className="bg-blue-400 p-2 px-6  rounded-lg">
+            <button className="bg-blue-400 sm:px-2 md:p-2 md:px-6  rounded-lg">
               Call Us
             </button>
-            <button className="bg-blue-400 p-2 px-6 rounded-lg">
+            <button className="bg-blue-400 sm:px-2 md:p-2 md:px-6 rounded-lg ">
               Follow Me
             </button>
           </div>
