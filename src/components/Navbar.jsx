@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+
 import { motion, useAnimation } from "motion/react";
+import { NavLink } from "react-router";
 export default function Navbar() {
   const controls = useAnimation();
   //   const [lastScrollY, setLastScrollY] = useState(0);
@@ -32,12 +34,24 @@ export default function Navbar() {
         <div className="flex w-full p-2 sm:p-3 md:p-4 border-b">
           <div className="flex w-[70%] gap-10 items-center">
             <div className="font-bold border-2 bg-blue-900 p-2 rounded-lg text-white">
-              RANDOM
+              <NavLink to="/" end>
+                RANDOM
+              </NavLink>
             </div>
             <ul className="flex gap-4">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
+              <li>
+                <NavLink to="/" end>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about-us" end>
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink end>Contact Us</NavLink>
+              </li>
             </ul>
           </div>
           <div className="w-[30%] flex justify-end gap-4 flex-wrap">

@@ -13,11 +13,13 @@ export default function HeroSection() {
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" },
     },
+    exit: { opacity: 0, y: -40, transition: { duration: 0.4 } },
   };
   return (
     <motion.section
       variants={parentVariant}
       initial="hidden"
+      exit="exit"
       whileInView={"visible"}
       viewport={{ once: true }}
       className="sm:mt-20 max-w-screen min-h-screen-xl mx-auto py-[8rem] flex flex-col gap-10 items-center"
